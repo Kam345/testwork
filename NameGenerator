@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Random name generator</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<style type='text/css'>
+			#name {
+				color : #444;
+				font : bold 51px times, Times New Roman, times-roman, georgia, serif;
+				letter-spacing : -2px;
+				line-height : 44px;
+				text-align : center;
+			}
+			#refresh {
+				font : normal 11px Gill Sans, Verdana;
+				letter-spacing : 2px;
+				line-height : 14px;
+				text-align : center;
+				text-transform : uppercase;
+			}
+			a { color : #666; }
+			a:hover { color : #999; }
+		</style>
+	</head>
+	 <body onload="onloadpdf()">
+		<script type="text/javascript">
+			consonnants = [
+				"DECAY ", "cap ", 'drip ', 'fantastic ', 'god ', 'AMPLIFIED ', 'AQUARIUS ', 'ARC ', 'ARCANE ', 'ASTRAL ',
+				'ATTIC ', 'BASEMENT ', 'BLACK ', 'BLAZE ', 'BLISS ', 'BOUNCE ', 'BREEZE ', 'BYTE ', 'CARBON ' ,'CARIBBEAN ' ,'CAVERN ' ,'CIRCUIT' ,'CONANT ' ,'CRESCENT ' ,'CRYSTAL ' ,'CURRENT ' ,'DAGGERS ' ,'DARK ' ,'DECODED ' ,'DEEP ' , 'CURRENT ' , 'DICE ' , 'DISTRICT ' , 'DRIFT  ' , 'DRIVE ' , 'DROP ' ,'DUST ', 'EARTH ', 'ELASTIC ', 'ERA ', 'FLAME ', ' FLARE ', 'FLEX ', 'FLOOR ', 'FLOW ', 'FLUTTER ' ,'FOREST ', 'FORGE ', 'FORMS ', 'FRICTION ', 'FUNK ', 'GARDENS ', 'GLARE ', 'GLOBAL ', 'GLOW ', 'GOLDEN ', 'GOLDEN ', 'GREY ', 'GRIND ','GRIT ' ,'GROVE ' ,'HALCYON ' ,'HALO ' ,'HAZE ' ,'HEADLAND ' ,'HEAT ' ,'HELIOS ' ,'HEXAGON ' ,'HIGHWAY ' ,'HORIZON ' ,'HUSTLE ' ,'IMPACT ' ,'INDIGO ' ,'INFAMOUS ' ,'JAM ' ,'KINGDOM ', 'LAZER ', 'LILAC ', 'LOCKDOWN ', 'LONDON ', 'LONE ', 'LOUNGE ', 'LUCID ', 'MAGNATE ' ,'MARBLE ' ,'MATTER ' ,'METEORIC ' ,'MIDNIGHT ' ,'MIKRO ', 'MISSION ' ,'MOLTEN ' ,'MOTOR ' ,'NEON ' ,'NOCTURNAL ' ,'OPALINE '];
+			name = "";
+			length = Math.floor(Math.random() * 3) + 2;
+			for (i = 0; i < length; i++)
+				name += (consonnants[Math.floor(Math.random()*consonnants.length)]
+						 +consonnants[Math.floor(Math.random()*consonnants.length)]);
+			name = name.charAt(0).toUpperCase() + name.slice(1);
+			document.write("<p id='name'>" + name + "</p>");
+		</script>
+		<p id="refresh">
+			<a href='#' onclick='window.location.reload()'>generate Your Name Today!</a>
+		</p>
+	</body>
+</html>
